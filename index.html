@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shahwaiz Sattar — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">SS</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO / ABOUT -->
+  <section id="about" class="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="badge">Available for opportunities</div>
+      <h1>Shahwaiz<br /><span class="accent">Sattar</span></h1>
+      <p class="role">Software Engineer · Full-Stack Developer · ML Enthusiast</p>
+      <p class="bio">
+        BSCS graduate from Bahria University, Karachi (CGPA 3.35). I build
+        full-stack web apps and machine learning solutions — from MERN-stack platforms
+        to CNN-based vision models. I care about clean architecture, real-time UX, and
+        shipping things that actually work.
+      </p>
+      <div class="hero-meta">
+        <span>📍 Karachi, Pakistan</span>
+        <span>🎓 Bahria University · BSCS</span>
+        <span>💼 Open to work</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="mailto:shahwaizsattar1010@gmail.com" class="btn btn-ghost">Get in Touch</a>
+      </div>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/shahwaiz-sattar-63062a292" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/shahwaizSattar" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <span>SS</span>
+        </div>
+      </div>
+      <div class="floating-card card-1">
+        <span class="card-icon">⚛️</span>
+        <span>React · Node · MongoDB</span>
+      </div>
+      <div class="floating-card card-2">
+        <span class="card-icon">🧠</span>
+        <span>TensorFlow · CNNs</span>
+      </div>
+      <div class="floating-card card-3">
+        <span class="card-icon">🎓</span>
+        <span>CGPA 3.35</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Work</span>
+        <h2>Featured Projects</h2>
+        <p>A selection of things I've built — from full-stack apps to ML models.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- The Paper Lab -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">✦</div>
+            <div class="project-badges">
+              <span class="badge-tech">React</span>
+              <span class="badge-tech">Zustand</span>
+              <span class="badge-tech">Framer Motion</span>
+              <span class="badge-tech">jsPDF</span>
+            </div>
+          </div>
+          <h3>The Paper Lab</h3>
+          <p class="project-type">Premium Journal Customizer · Frontend Web App</p>
+          <p class="project-desc">
+            High-fidelity stationery customizer built entirely in the browser — no backend.
+            Configure cover color, texture, spine, paper type, monogram, and custom artwork
+            in real time. Designs share via Base64 URL; drafts persist in localStorage.
+          </p>
+          <a href="https://github.com/shahwaizSattar/paper-lab" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+        <!-- RecipeScan -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">🍽️</div>
+            <div class="project-badges">
+              <span class="badge-tech">JavaScript</span>
+              <span class="badge-tech">MERN</span>
+              <span class="badge-tech">ML</span>
+            </div>
+          </div>
+          <h3>RecipeScan</h3>
+          <p class="project-type">AI-Powered Recipe App · Full-Stack</p>
+          <p class="project-desc">
+            Full-stack app that scans ingredients and suggests recipes using machine learning.
+            Built on the MERN stack with a REST API backend and an ML model for ingredient recognition.
+          </p>
+          <a href="https://github.com/shahwaizSattar/recipe-scan" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+        <!-- Anonymous Social / Echo -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">👤</div>
+            <div class="project-badges">
+              <span class="badge-tech">TypeScript</span>
+              <span class="badge-tech">React</span>
+            </div>
+          </div>
+          <h3>Anonymous Social</h3>
+          <p class="project-type">Anonymous Social Media App · Full-Stack</p>
+          <p class="project-desc">
+            Anonymous social media platform where users can post and interact without revealing
+            their identity. Built with TypeScript for type-safe, scalable architecture.
+          </p>
+          <a href="https://github.com/shahwaizSattar/Anonymous_social" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+        <!-- Echo -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">🔊</div>
+            <div class="project-badges">
+              <span class="badge-tech">TypeScript</span>
+              <span class="badge-tech">React</span>
+            </div>
+          </div>
+          <h3>Echo</h3>
+          <p class="project-type">Anonymous Social Media App · Full-Stack</p>
+          <p class="project-desc">
+            Echo is an anonymous social media app focused on open expression. Evolved from
+            WhisperEcho, built with TypeScript for a robust, maintainable codebase.
+          </p>
+          <a href="https://github.com/shahwaizSattar/Echo" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+        <!-- Blog App -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">�</div>
+            <div class="project-badges">
+              <span class="badge-tech">MongoDB</span>
+              <span class="badge-tech">Express</span>
+              <span class="badge-tech">React</span>
+              <span class="badge-tech">Node</span>
+            </div>
+          </div>
+          <h3>Blog Application</h3>
+          <p class="project-type">Full-Stack · MERN</p>
+          <p class="project-desc">
+            Full-stack blog platform with user authentication, JWT-based sessions, and a
+            REST API. Users can create, edit, and delete posts with a clean, responsive UI.
+          </p>
+          <a href="https://github.com/shahwaizSattar/mern-blog" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+        <!-- Shape Identifier -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">🔷</div>
+            <div class="project-badges">
+              <span class="badge-tech">Python</span>
+              <span class="badge-tech">TensorFlow</span>
+              <span class="badge-tech">CNN</span>
+            </div>
+          </div>
+          <h3>Shape Identifier</h3>
+          <p class="project-type">Machine Learning · Computer Vision</p>
+          <p class="project-desc">
+            CNN-based shape detection model built with TensorFlow. Trained to classify
+            geometric shapes from images using supervised learning techniques.
+          </p>
+          <a href="https://github.com/shahwaizSattar/SHAPE-IDENTIFIER" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Toolkit</span>
+        <h2>Skills &amp; Technologies</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <div class="skill-tags">
+            <span>JavaScript</span><span>Python</span><span>Java</span><span>C++</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Web</h4>
+          <div class="skill-tags">
+            <span>React</span><span>Node.js</span><span>Express</span><span>REST APIs</span>
+            <span>HTML</span><span>CSS</span><span>Bootstrap</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Databases</h4>
+          <div class="skill-tags">
+            <span>MongoDB</span><span>SQL Server</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Machine Learning</h4>
+          <div class="skill-tags">
+            <span>TensorFlow</span><span>CNNs</span><span>Supervised ML</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Tools &amp; Concepts</h4>
+          <div class="skill-tags">
+            <span>Git</span><span>GitHub</span><span>OOP</span>
+            <span>Data Structures</span><span>Algorithms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-box">
+        <span class="section-tag">Let's talk</span>
+        <h2>Get in Touch</h2>
+        <p>Open to internships, junior roles, and interesting projects. Drop me a line.</p>
+        <div class="contact-links">
+          <a href="mailto:shahwaizsattar1010@gmail.com" class="btn btn-primary">shahwaizsattar1010@gmail.com</a>
+          <a href="https://linkedin.com/in/shahwaiz-sattar-63062a292" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+          <a href="https://github.com/shahwaizSattar" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+        </div>
+        <p class="contact-phone">📞 +92-313-8290639</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by Shahwaiz Sattar · Karachi, Pakistan</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
