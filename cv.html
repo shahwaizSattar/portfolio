@@ -84,15 +84,15 @@
     .cv-contact a { color: var(--accent); text-decoration: none; }
 
     /* ── SECTION ── */
-    .sec { margin-bottom: 14px; }
+    .sec { margin-bottom: 16px; }
     .sec-title {
       font-size: 10px; font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--accent);
       border-bottom: 1px solid var(--border);
-      padding-bottom: 3px;
-      margin-bottom: 9px;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
     }
 
     /* ── SUMMARY ── */
@@ -126,26 +126,31 @@
 
     /* ── SKILLS ── */
     .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-    .sk-row { display: flex; align-items: baseline; gap: 0.5rem; }
+    .sk-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
     .sk-label {
       font-size: 10px; font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--muted);
       white-space: nowrap;
-      min-width: 90px;
+      min-width: 110px;
+      padding-top: 3px;
     }
-    .sk-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+    .sk-pills { display: flex; flex-wrap: wrap; gap: 5px; }
     .pill {
       background: #ede9fe;
       color: #4f46e5;
       font-size: 10.5px;
       font-weight: 500;
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 100px;
     }
 
