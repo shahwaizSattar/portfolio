@@ -20,42 +20,46 @@
       font-family: 'Inter', sans-serif;
       background: #f3f4f6;
       color: var(--text);
-      font-size: 13px;
-      line-height: 1.5;
+      font-size: 12.5px;
+      line-height: 1.45;
     }
 
-    /* ── DOWNLOAD BAR ── */
+    /* ── BAR ── */
     .bar {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
       background: #1e1b4b;
-      padding: 0.6rem 2rem;
+      padding: 0.55rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
     }
-    .bar span { color: #c7d2fe; font-size: 0.82rem; }
+    .bar span { color: #c7d2fe; font-size: 0.8rem; }
+    .bar-btns { display: flex; gap: 0.6rem; }
     .dl-btn {
       background: #4f46e5;
       color: #fff;
       border: none;
-      padding: 0.45rem 1.1rem;
+      padding: 0.4rem 1rem;
       border-radius: 6px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 600;
       cursor: pointer;
+      white-space: nowrap;
     }
     .dl-btn:hover { background: #4338ca; }
+    .dl-btn.word { background: #1d6f42; }
+    .dl-btn.word:hover { background: #155c36; }
 
-    /* ── PAGE WRAPPER ── */
+    /* ── PAGE ── */
     .page {
       width: 794px;
-      min-height: 1123px;
-      margin: 72px auto 40px;
+      margin: 68px auto 40px;
       background: #fff;
       box-shadow: 0 4px 24px rgba(0,0,0,0.1);
-      padding: 36px 44px 32px;
+      padding: 32px 42px 28px;
     }
 
     /* ── HEADER ── */
@@ -63,13 +67,13 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding-bottom: 14px;
+      padding-bottom: 12px;
       border-bottom: 2px solid var(--accent);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-    .cv-name { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
+    .cv-name { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
     .cv-title {
-      font-size: 11px; font-weight: 600;
+      font-size: 10.5px; font-weight: 600;
       color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.07em;
@@ -77,85 +81,80 @@
     }
     .cv-contact {
       text-align: right;
-      font-size: 11.5px;
+      font-size: 11px;
       color: var(--muted);
-      line-height: 1.75;
+      line-height: 1.7;
     }
     .cv-contact a { color: var(--accent); text-decoration: none; }
 
-    /* ── SECTION ── */
-    .sec { margin-bottom: 16px; }
+    /* ── SECTIONS ── */
+    .sec { margin-bottom: 12px; }
     .sec-title {
-      font-size: 10px; font-weight: 700;
+      font-size: 9.5px; font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--accent);
       border-bottom: 1px solid var(--border);
-      padding-bottom: 4px;
-      margin-bottom: 10px;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
     }
 
     /* ── SUMMARY ── */
-    .summary { font-size: 12.5px; color: #374151; line-height: 1.6; }
+    .summary { font-size: 11.5px; color: #374151; line-height: 1.55; }
 
     /* ── EDUCATION ── */
     .edu-row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 7px;
+      margin-bottom: 5px;
       gap: 1rem;
     }
-    .edu-deg { font-weight: 600; font-size: 12.5px; }
-    .edu-school { font-size: 11.5px; color: var(--muted); }
-    .edu-right { text-align: right; font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+    .edu-deg { font-weight: 600; font-size: 12px; }
+    .edu-school { font-size: 11px; color: var(--muted); }
+    .edu-right { text-align: right; font-size: 11px; color: var(--muted); white-space: nowrap; }
     .edu-grade { font-weight: 600; color: var(--accent); }
 
     /* ── PROJECTS ── */
-    .proj { margin-bottom: 10px; }
+    .proj { margin-bottom: 8px; }
     .proj-top {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 0.5rem;
     }
-    .proj-name { font-weight: 600; font-size: 12.5px; }
-    .proj-stack { font-size: 11px; color: var(--muted); white-space: nowrap; }
-    .proj-desc { font-size: 11.5px; color: #374151; margin-top: 2px; line-height: 1.5; }
-    .proj-link { font-size: 11px; color: var(--accent); text-decoration: none; }
+    .proj-name { font-weight: 600; font-size: 12px; }
+    .proj-stack { font-size: 10.5px; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
+    .proj-desc { font-size: 11px; color: #374151; margin-top: 2px; line-height: 1.45; }
+    .proj-bullets { font-size: 10.5px; color: #4b5563; margin-top: 2px; line-height: 1.5; }
+    .proj-link { font-size: 10.5px; color: var(--accent); text-decoration: none; }
 
     /* ── SKILLS ── */
-    .skills-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .sk-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
+    .skills-table { width: 100%; border-collapse: collapse; }
+    .skills-table tr { vertical-align: top; }
+    .skills-table td { padding: 3px 0; }
     .sk-label {
-      font-size: 10px; font-weight: 700;
+      font-size: 9.5px; font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--muted);
       white-space: nowrap;
-      min-width: 110px;
-      padding-top: 3px;
+      width: 110px;
+      padding-right: 12px;
+      padding-top: 4px;
     }
-    .sk-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+    .sk-pills { display: flex; flex-wrap: wrap; gap: 4px; }
     .pill {
       background: #ede9fe;
       color: #4f46e5;
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 500;
-      padding: 3px 10px;
+      padding: 2px 8px;
       border-radius: 100px;
     }
 
     /* ── LANGUAGES ── */
-    .lang-row { display: flex; gap: 2rem; font-size: 12px; }
+    .lang-row { display: flex; gap: 2rem; font-size: 11.5px; }
     .lang-row span { color: var(--muted); }
 
     /* ── PRINT ── */
@@ -164,8 +163,7 @@
       .bar { display: none; }
       .page {
         margin: 0; box-shadow: none;
-        width: 100%; min-height: unset;
-        padding: 28px 36px;
+        width: 100%; padding: 24px 36px;
       }
       @page { size: A4; margin: 0; }
     }
@@ -175,12 +173,14 @@
 
   <div class="bar">
     <span>Shahwaiz Sattar — CV</span>
-    <button class="dl-btn" onclick="window.print()">⬇ Download as PDF</button>
+    <div class="bar-btns">
+      <button class="dl-btn word" onclick="downloadWord()">⬇ Word (.docx)</button>
+      <button class="dl-btn" onclick="window.print()">⬇ PDF</button>
+    </div>
   </div>
 
-  <div class="page">
+  <div class="page" id="cv-page">
 
-    <!-- HEADER -->
     <div class="cv-header">
       <div>
         <div class="cv-name">Shahwaiz Sattar</div>
@@ -194,42 +194,27 @@
       </div>
     </div>
 
-    <!-- SUMMARY -->
     <div class="sec">
       <div class="sec-title">Summary</div>
-      <p class="summary">BSCS graduate from Bahria University, Karachi (CGPA 3.35) specialising in Microsoft Power Platform development and full-stack engineering. Built enterprise-grade solutions using Power Pages, Power Apps, Power Automate, and Dataverse. Also experienced in MERN-stack applications, REST APIs, and CNN-based ML models.</p>
+      <p class="summary">BSCS graduate from Bahria University, Karachi (CGPA 3.35) specialising in Microsoft Power Platform and full-stack development. Built enterprise-grade solutions using Power Pages, Power Apps, Power Automate, and Dataverse. Also experienced in MERN-stack applications, REST APIs, and CNN-based ML models.</p>
     </div>
 
-    <!-- EDUCATION -->
     <div class="sec">
       <div class="sec-title">Education</div>
-
       <div class="edu-row">
-        <div>
-          <div class="edu-deg">Bachelor of Science in Computer Science (BSCS)</div>
-          <div class="edu-school">Bahria University, Karachi Campus</div>
-        </div>
+        <div><div class="edu-deg">Bachelor of Science in Computer Science (BSCS)</div><div class="edu-school">Bahria University, Karachi Campus</div></div>
         <div class="edu-right"><div>Mar 2022 – 2026</div><div class="edu-grade">CGPA: 3.35</div></div>
       </div>
-
       <div class="edu-row">
-        <div>
-          <div class="edu-deg">Intermediate in Pre-Engineering</div>
-          <div class="edu-school">Board of Intermediate Education, Karachi</div>
-        </div>
+        <div><div class="edu-deg">Intermediate in Pre-Engineering</div><div class="edu-school">Board of Intermediate Education, Karachi</div></div>
         <div class="edu-right"><div>Jul 2019 – Aug 2021</div><div class="edu-grade">74.09%</div></div>
       </div>
-
       <div class="edu-row">
-        <div>
-          <div class="edu-deg">Matriculation in Computer Science</div>
-          <div class="edu-school">Board of Secondary Education, Karachi</div>
-        </div>
+        <div><div class="edu-deg">Matriculation in Computer Science</div><div class="edu-school">Board of Secondary Education, Karachi</div></div>
         <div class="edu-right"><div>Aug 2016 – Mar 2018</div><div class="edu-grade">75.17%</div></div>
       </div>
     </div>
 
-    <!-- PROJECTS -->
     <div class="sec">
       <div class="sec-title">Projects</div>
 
@@ -238,8 +223,8 @@
           <span class="proj-name">Visitor Access Portal</span>
           <span class="proj-stack">Power Pages · Power Apps · Power Automate · Dataverse</span>
         </div>
-        <div class="proj-desc">Enterprise-grade smart-campus solution digitizing the full visitor lifecycle at Bahria University. Power Pages handles secure web-based registration via a multistep form backed by Dataverse. A Model-Driven Power App gives admins a 360° dashboard to accept or reject visit requests. Power Automate triggers on status change, fetches visitor email, generates a unique QR code via third-party API, and delivers a branded HTML entry pass — enabling touchless, secure campus access.</div>
-        <div class="proj-desc" style="margin-top:3px;">· Reduced visitor registration time by ~60% &nbsp;·&nbsp; Relational Dataverse schema for many-to-one visitor/visit relationships &nbsp;·&nbsp; QR-code automation via Power Automate cloud flow &nbsp;·&nbsp; CSS/HTML overrides to bypass legacy portal UI limitations</div>
+        <div class="proj-desc">Enterprise smart-campus solution digitizing the visitor lifecycle at Bahria University. Power Pages handles web registration, a Model-Driven Power App gives admins a 360° dashboard, and Power Automate auto-generates QR-code entry passes on approval.</div>
+        <div class="proj-bullets">· ~60% reduction in registration time &nbsp;·&nbsp; Relational Dataverse schema &nbsp;·&nbsp; QR-code cloud flow &nbsp;·&nbsp; CSS/HTML portal overrides</div>
       </div>
 
       <div class="proj">
@@ -247,7 +232,7 @@
           <span class="proj-name">The Paper Lab</span>
           <span class="proj-stack">React · Zustand · Framer Motion · jsPDF</span>
         </div>
-        <div class="proj-desc">High-fidelity stationery customizer built entirely client-side. Drag &amp; drop canvas, CSS texture overlays, gold foil monogram, client-side PDF export via html2canvas, and full design sharing via Base64 URL — zero backend.</div>
+        <div class="proj-desc">High-fidelity stationery customizer — drag &amp; drop canvas, CSS texture overlays, gold foil monogram, client-side PDF export via html2canvas, and Base64 URL sharing. Zero backend.</div>
         <a class="proj-link" href="https://github.com/shahwaizSattar/paper-lab">github.com/shahwaizSattar/paper-lab</a>
       </div>
 
@@ -256,7 +241,7 @@
           <span class="proj-name">RecipeScan</span>
           <span class="proj-stack">JavaScript · MERN · ML · REST API</span>
         </div>
-        <div class="proj-desc">Full-stack app that scans ingredients and suggests recipes using an ML model. MERN stack with REST API backend and ML-powered ingredient recognition.</div>
+        <div class="proj-desc">Full-stack app that scans ingredients and suggests recipes using an ML model on a MERN stack with REST API backend.</div>
         <a class="proj-link" href="https://github.com/shahwaizSattar/recipe-scan">github.com/shahwaizSattar/recipe-scan</a>
       </div>
 
@@ -265,7 +250,7 @@
           <span class="proj-name">Echo / Anonymous Social</span>
           <span class="proj-stack">TypeScript · React</span>
         </div>
-        <div class="proj-desc">Anonymous social media platform where users post and interact without revealing identity. Type-safe, scalable TypeScript architecture.</div>
+        <div class="proj-desc">Anonymous social media platform built with TypeScript for a type-safe, scalable architecture.</div>
         <a class="proj-link" href="https://github.com/shahwaizSattar/Echo">github.com/shahwaizSattar/Echo</a>
       </div>
 
@@ -274,7 +259,7 @@
           <span class="proj-name">Blog Application</span>
           <span class="proj-stack">MongoDB · Express · React · Node.js</span>
         </div>
-        <div class="proj-desc">Full-stack blog platform with JWT authentication, user sessions, and a REST API.</div>
+        <div class="proj-desc">Full-stack blog with JWT authentication, user sessions, and REST API.</div>
         <a class="proj-link" href="https://github.com/shahwaizSattar/mern-blog">github.com/shahwaizSattar/mern-blog</a>
       </div>
 
@@ -283,55 +268,41 @@
           <span class="proj-name">Shape Identifier</span>
           <span class="proj-stack">Python · TensorFlow · CNN</span>
         </div>
-        <div class="proj-desc">CNN-based shape detection model trained to classify geometric shapes from images using supervised learning.</div>
+        <div class="proj-desc">CNN-based shape detection model using supervised learning to classify geometric shapes from images.</div>
         <a class="proj-link" href="https://github.com/shahwaizSattar/SHAPE-IDENTIFIER">github.com/shahwaizSattar/SHAPE-IDENTIFIER</a>
       </div>
     </div>
 
-    <!-- SKILLS -->
     <div class="sec">
       <div class="sec-title">Skills</div>
-      <div class="skills-grid">
-        <div class="sk-row">
-          <span class="sk-label">Power Platform</span>
-          <div class="sk-pills">
-            <span class="pill">Power Pages</span><span class="pill">Power Apps</span><span class="pill">Power Automate</span><span class="pill">Dataverse</span>
-          </div>
-        </div>
-        <div class="sk-row">
-          <span class="sk-label">Languages</span>
-          <div class="sk-pills">
-            <span class="pill">JavaScript</span><span class="pill">TypeScript</span><span class="pill">Python</span><span class="pill">Java</span><span class="pill">C++</span>
-          </div>
-        </div>
-        <div class="sk-row">
-          <span class="sk-label">Databases</span>
-          <div class="sk-pills">
-            <span class="pill">MongoDB</span><span class="pill">SQL Server</span>
-          </div>
-        </div>
-        <div class="sk-row">
-          <span class="sk-label">Web</span>
-          <div class="sk-pills">
-            <span class="pill">React</span><span class="pill">Node.js</span><span class="pill">Express</span><span class="pill">REST APIs</span><span class="pill">HTML/CSS</span><span class="pill">Bootstrap</span>
-          </div>
-        </div>
-        <div class="sk-row">
-          <span class="sk-label">ML</span>
-          <div class="sk-pills">
-            <span class="pill">TensorFlow</span><span class="pill">CNNs</span><span class="pill">Supervised ML</span>
-          </div>
-        </div>
-        <div class="sk-row">
-          <span class="sk-label">Tools</span>
-          <div class="sk-pills">
-            <span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">OOP</span><span class="pill">DSA</span>
-          </div>
-        </div>
-      </div>
+      <table class="skills-table">
+        <tr>
+          <td class="sk-label">Power Platform</td>
+          <td><div class="sk-pills"><span class="pill">Power Pages</span><span class="pill">Power Apps</span><span class="pill">Power Automate</span><span class="pill">Dataverse</span></div></td>
+        </tr>
+        <tr>
+          <td class="sk-label">Languages</td>
+          <td><div class="sk-pills"><span class="pill">JavaScript</span><span class="pill">TypeScript</span><span class="pill">Python</span><span class="pill">Java</span><span class="pill">C++</span></div></td>
+        </tr>
+        <tr>
+          <td class="sk-label">Web</td>
+          <td><div class="sk-pills"><span class="pill">React</span><span class="pill">Node.js</span><span class="pill">Express</span><span class="pill">REST APIs</span><span class="pill">HTML/CSS</span><span class="pill">Bootstrap</span></div></td>
+        </tr>
+        <tr>
+          <td class="sk-label">Databases</td>
+          <td><div class="sk-pills"><span class="pill">MongoDB</span><span class="pill">SQL Server</span></div></td>
+        </tr>
+        <tr>
+          <td class="sk-label">ML</td>
+          <td><div class="sk-pills"><span class="pill">TensorFlow</span><span class="pill">CNNs</span><span class="pill">Supervised ML</span></div></td>
+        </tr>
+        <tr>
+          <td class="sk-label">Tools</td>
+          <td><div class="sk-pills"><span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">OOP</span><span class="pill">DSA</span></div></td>
+        </tr>
+      </table>
     </div>
 
-    <!-- LANGUAGES -->
     <div class="sec">
       <div class="sec-title">Languages</div>
       <div class="lang-row">
@@ -341,5 +312,108 @@
     </div>
 
   </div>
+
+  <script>
+    function downloadWord() {
+      const content = `
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+  <meta charset="utf-8">
+  <title>Shahwaiz Sattar CV</title>
+  <!--[if gte mso 9]>
+  <xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument></xml>
+  <![endif]-->
+  <style>
+    body { font-family: Calibri, sans-serif; font-size: 11pt; color: #111827; margin: 2cm; }
+    h1 { font-size: 20pt; font-weight: bold; margin-bottom: 2pt; }
+    .title { font-size: 9pt; color: #4f46e5; text-transform: uppercase; letter-spacing: 1pt; margin-bottom: 4pt; }
+    .contact { font-size: 9pt; color: #6b7280; text-align: right; }
+    hr { border: none; border-top: 2pt solid #4f46e5; margin: 8pt 0 6pt; }
+    .sec-title { font-size: 8pt; font-weight: bold; text-transform: uppercase; color: #4f46e5; letter-spacing: 1pt; border-bottom: 0.5pt solid #e5e7eb; padding-bottom: 2pt; margin: 10pt 0 5pt; }
+    .proj-name { font-weight: bold; font-size: 10.5pt; }
+    .proj-stack { font-size: 9pt; color: #6b7280; }
+    .proj-desc { font-size: 9.5pt; color: #374151; margin: 2pt 0; }
+    .edu-deg { font-weight: bold; font-size: 10.5pt; }
+    .edu-school { font-size: 9.5pt; color: #6b7280; }
+    .skill-row { font-size: 9.5pt; margin-bottom: 3pt; }
+    .skill-label { font-weight: bold; color: #6b7280; text-transform: uppercase; font-size: 8.5pt; }
+    table { width: 100%; }
+    td { vertical-align: top; }
+  </style>
+</head>
+<body>
+<table><tr>
+  <td><h1>Shahwaiz Sattar</h1><div class="title">Power Platform Developer · Full-Stack Developer</div></td>
+  <td class="contact">Karachi, Pakistan · +92-313-8290639<br>shahwaizsattar1010@gmail.com<br>linkedin.com/in/shahwaiz-sattar-63062a292<br>github.com/shahwaizSattar</td>
+</tr></table>
+<hr>
+
+<div class="sec-title">Summary</div>
+<p style="font-size:9.5pt;color:#374151;">BSCS graduate from Bahria University, Karachi (CGPA 3.35) specialising in Microsoft Power Platform and full-stack development. Built enterprise-grade solutions using Power Pages, Power Apps, Power Automate, and Dataverse. Also experienced in MERN-stack applications, REST APIs, and CNN-based ML models.</p>
+
+<div class="sec-title">Education</div>
+<table>
+  <tr><td><div class="edu-deg">Bachelor of Science in Computer Science (BSCS)</div><div class="edu-school">Bahria University, Karachi Campus</div></td><td style="text-align:right;font-size:9.5pt;color:#6b7280;">Mar 2022 – 2026<br><b style="color:#4f46e5;">CGPA: 3.35</b></td></tr>
+  <tr><td><div class="edu-deg">Intermediate in Pre-Engineering</div><div class="edu-school">Board of Intermediate Education, Karachi</div></td><td style="text-align:right;font-size:9.5pt;color:#6b7280;">Jul 2019 – Aug 2021<br><b style="color:#4f46e5;">74.09%</b></td></tr>
+  <tr><td><div class="edu-deg">Matriculation in Computer Science</div><div class="edu-school">Board of Secondary Education, Karachi</div></td><td style="text-align:right;font-size:9.5pt;color:#6b7280;">Aug 2016 – Mar 2018<br><b style="color:#4f46e5;">75.17%</b></td></tr>
+</table>
+
+<div class="sec-title">Projects</div>
+
+<div class="proj-name">Visitor Access Portal</div>
+<div class="proj-stack">Power Pages · Power Apps · Power Automate · Dataverse</div>
+<div class="proj-desc">Enterprise smart-campus solution digitizing the visitor lifecycle at Bahria University. Power Pages handles web registration, a Model-Driven Power App gives admins a 360° dashboard, and Power Automate auto-generates QR-code entry passes on approval.</div>
+<div class="proj-desc">· ~60% reduction in registration time · Relational Dataverse schema · QR-code cloud flow · CSS/HTML portal overrides</div>
+
+<br>
+<div class="proj-name">The Paper Lab</div>
+<div class="proj-stack">React · Zustand · Framer Motion · jsPDF</div>
+<div class="proj-desc">High-fidelity stationery customizer — drag &amp; drop canvas, CSS texture overlays, gold foil monogram, client-side PDF export, and Base64 URL sharing. Zero backend. github.com/shahwaizSattar/paper-lab</div>
+
+<br>
+<div class="proj-name">RecipeScan</div>
+<div class="proj-stack">JavaScript · MERN · ML · REST API</div>
+<div class="proj-desc">Full-stack app that scans ingredients and suggests recipes using an ML model on a MERN stack. github.com/shahwaizSattar/recipe-scan</div>
+
+<br>
+<div class="proj-name">Echo / Anonymous Social</div>
+<div class="proj-stack">TypeScript · React</div>
+<div class="proj-desc">Anonymous social media platform with type-safe TypeScript architecture. github.com/shahwaizSattar/Echo</div>
+
+<br>
+<div class="proj-name">Blog Application</div>
+<div class="proj-stack">MongoDB · Express · React · Node.js</div>
+<div class="proj-desc">Full-stack blog with JWT authentication and REST API. github.com/shahwaizSattar/mern-blog</div>
+
+<br>
+<div class="proj-name">Shape Identifier</div>
+<div class="proj-stack">Python · TensorFlow · CNN</div>
+<div class="proj-desc">CNN-based shape detection model using supervised learning. github.com/shahwaizSattar/SHAPE-IDENTIFIER</div>
+
+<div class="sec-title">Skills</div>
+<div class="skill-row"><span class="skill-label">Power Platform: </span>Power Pages · Power Apps · Power Automate · Dataverse</div>
+<div class="skill-row"><span class="skill-label">Languages: </span>JavaScript · TypeScript · Python · Java · C++</div>
+<div class="skill-row"><span class="skill-label">Web: </span>React · Node.js · Express · REST APIs · HTML/CSS · Bootstrap</div>
+<div class="skill-row"><span class="skill-label">Databases: </span>MongoDB · SQL Server</div>
+<div class="skill-row"><span class="skill-label">ML: </span>TensorFlow · CNNs · Supervised ML</div>
+<div class="skill-row"><span class="skill-label">Tools: </span>Git · GitHub · OOP · DSA</div>
+
+<div class="sec-title">Languages</div>
+<div class="skill-row"><b>Urdu</b> — Native &nbsp;&nbsp;&nbsp; <b>English</b> — Professional</div>
+
+</body></html>`;
+
+      const blob = new Blob(['\ufeff', content], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Shahwaiz_Sattar_CV.doc';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+
 </body>
 </html>
